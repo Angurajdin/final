@@ -1,5 +1,7 @@
 <?php
 require_once "head-side.php";
+require_once "db/db_connect.php";
+
 
 
 ?>
