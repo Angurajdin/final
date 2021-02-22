@@ -13,6 +13,9 @@
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="../mdb/css/mdb.min.css">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
   <!-- Google Fonts -->
@@ -55,53 +58,7 @@
         <!-- Side navigation links -->
         <li>
           <ul class="collapsible collapsible-accordion">
-            <li><a class="collapsible-header waves-effect arrow-r"><i class="far fa-check-square"></i> Forms<i class="fas fa-angle-down rotate-icon"></i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="../forms/basic.html" class="waves-effect">Basic</a>
-                  </li>
-                  <li><a href="../forms/extended.html" class="waves-effect">Extended</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-table"></i> Tables<i class="fas fa-angle-down rotate-icon"></i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="../tables/basic.html" class="waves-effect">Basic</a>
-                  </li>
-                  <li><a href="../tables/extended.html" class="waves-effect">Extended</a>
-                  </li>
-                  <li><a href="../tables/datatables.html" class="waves-effect">DataTables.net</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li><a class="collapsible-header waves-effect arrow-r"><i class="fas fa-map"></i> Maps<i class="fas fa-angle-down rotate-icon"></i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="../maps/google.html" class="waves-effect">Google Maps</a>
-                  </li>
-                  <li><a href="../maps/full.html" class="waves-effect">Full screen map</a>
-                  </li>
-                  <li><a href="../maps/vector.html" class="waves-effect">Vector world map</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <!-- Simple link -->
-            <li><a href="../alerts/alerts.html" class="collapsible-header waves-effect"><i class=" far fa-bell"></i>
-                Alerts</a></li>
-
-            <li><a href="../modals/modals.html" class="collapsible-header waves-effect"><i class=" fas fa-bolt"></i>
-                Modals</a></li>
-
-            <li><a href="../charts/charts.html" class="collapsible-header waves-effect"><i class=" fas fa-chart-pie"></i>
-                Charts</a></li>
-
-            <li><a href="../calendar/calendar.html" class="collapsible-header waves-effect"><i class=" far fa-calendar-check"></i>
-                Calendar</a></li>
-
+            
             <li><a href="../sections/sections.html" class="collapsible-header waves-effect"><i class=" fas fa-th-large"></i>
                 Sections</a></li>
 
@@ -127,23 +84,17 @@
       <!--Navbar links-->
       <ul class="nav navbar-nav nav-flex-icons ml-auto">
 
+        <li class="nav-item">
+          <a class="nav-link waves-effect"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
+        </li>
         
         <li class="nav-item">
           <a class="nav-link waves-effect"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-effect"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
+          <a class="nav-link waves-effect"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Comments</span></a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span></a>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Log Out</a>
-            <a class="dropdown-item" href="#">My account</a>
-          </div>
-        </li>
+        
 
       </ul>
       <!--/Navbar links-->
@@ -154,4 +105,4 @@
   <!--Main Navigation-->
   <!-- Main layout -->
   <main>
-    <div class="container-fluid">
+    <div class="container">
