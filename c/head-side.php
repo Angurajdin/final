@@ -41,7 +41,7 @@
         <!-- Logo -->
         <li class="logo-sn waves-effect py-3">
           <div class="text-center">
-            <a href="#" class="pl-0">Code Learning Application</a>
+            <a href="../index.html" class="pl-0">Code Learning Application</a>
           </div>
         </li>
         <!-- Logo -->
@@ -58,10 +58,19 @@
         <!-- Side navigation links -->
         <li>
           <ul class="collapsible collapsible-accordion">
-            
-            <li><a href="../sections/sections.html" class="collapsible-header waves-effect"><i class=" fas fa-th-large"></i>
-                Sections</a></li>
+          <?php
+            require_once "head-side.php";
+            require_once "../db/db_connect.php";
 
+            error_reporting(0);
+            $q = mysqli_query($connect,"select * from c_lang");
+
+            while($n=mysqli_fetch_array($q)){
+
+          ?>
+            <li><a href="c.php?id=<?php echo $n[0];?>" class="collapsible-header waves-effect"><i class=" fas fa-th-large"></i>
+                <?php     echo $n['indextopic'];       ?>           </a></li>
+          <?php } ?>
           </ul>
         </li>
         <!-- Side navigation links -->
@@ -78,21 +87,20 @@
       </div>
       <!-- Breadcrumb-->
       <div class="breadcrumb-dn mr-auto">
-        <p>Code Learning Application</p>
+        &emsp;
+        <a href="../index.html">Code Learning Application</a>
       </div>
 
       <!--Navbar links-->
       <ul class="nav navbar-nav nav-flex-icons ml-auto">
 
+
+                  
         <li class="nav-item">
           <a class="nav-link waves-effect"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
         </li>
-        
         <li class="nav-item">
           <a class="nav-link waves-effect"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contact</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Comments</span></a>
         </li>
         
 

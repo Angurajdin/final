@@ -8,8 +8,7 @@
   <!-- Copyright -->
   <div class="footer-copyright py-3 text-center">
     <div class="container-fluid">
-      © 2019 Copyright: <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
-
+        Anguarj and Mohanraj
     </div>
   </div>
   <!-- Copyright -->

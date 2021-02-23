@@ -1,9 +1,11 @@
 <?php
 require_once "head-side.php";
 require_once "../db/db_connect.php";
-
 error_reporting(0);
-$q = mysqli_query($connect,"select * from c_lang where id='25'");
+
+$topicid=$_GET['id'];
+
+$q = mysqli_query($connect,"select * from c_lang where id='". $topicid ."'");
 
 while($n=  mysqli_fetch_array($q)){
 
@@ -14,10 +16,33 @@ while($n=  mysqli_fetch_array($q)){
 
 <div class="row">
     <div class="col">
-      <button type="button" class="btn btn-success"><i class="fas fa-caret-left"></i>&emsp;Pervious</button>
+      <?php
+        if($n[0]>1){
+        $previousid = 0;
+        $previousid = (int)$n[0]*1 - 1;
+        $prev = mysqli_query($connect,"select * from c_lang where id='". $previousid ."'");
+        while($pt = mysqli_fetch_array($prev)){
+      ?>
+      <a type="button" data-mdb-toggle="tooltip" data-mdb-placement="right" 
+      title="<?php echo $pt[1]; ?>" href="c.php?id=<?php echo $pt[0]; ?>"
+      class="btn btn-success"><i class="fas fa-caret-left"></i>&emsp;Pervious</a>
+      <?php } } ?>
     </div>
     <div class="col">
-      <button type="button" style="float: right;" class="btn btn-success">Next&emsp;<i class="fas fa-caret-right"></i></button>
+      <?php
+
+          $q_cnt_rows = mysqli_query($connect,"select * from c_lang");
+          $cnt_rows = mysqli_num_rows($q_cnt_rows);
+          if($cid!=$cnt_rows){
+          $nextid = 0;
+          $nextid = (int)$n[0]*1 + 1;
+          $nexttopic = mysqli_query($connect,"select * from c_lang where id='". $nextid ."'");
+          while($nxt = mysqli_fetch_array($nexttopic)){
+        ?>
+        <a type="button" data-mdb-toggle="tooltip" data-mdb-placement="left" style="float:right;"
+        title="<?php echo $nxt[1]; ?>" href="c.php?id=<?php echo $nxt[0]; ?>" 
+        class="btn btn-success">Next &emsp;<i class="fas fa-caret-right"></i></a>
+        <?php } } ?>
     </div>
 </div>
 
@@ -149,12 +174,36 @@ while($n=  mysqli_fetch_array($q)){
 
 <div class="row">
     <div class="col">
-      <button type="button" class="btn btn-success"><i class="fas fa-caret-left"></i>&emsp;Pervious</button>
+      <?php
+        if($n[0]>1){
+        $previousid = 0;
+        $previousid = (int)$n[0]*1 - 1;
+        $prev = mysqli_query($connect,"select * from c_lang where id='". $previousid ."'");
+        while($pt = mysqli_fetch_array($prev)){
+      ?>
+      <a type="button" data-mdb-toggle="tooltip" data-mdb-placement="right" 
+      title="<?php echo $pt[1]; ?>" href="c.php?id=<?php echo $pt[0]; ?>"
+      class="btn btn-success"><i class="fas fa-caret-left"></i>&emsp;Pervious</a>
+      <?php } } ?>
     </div>
     <div class="col">
-      <button type="button" style="float: right;" class="btn btn-success">Next&emsp;<i class="fas fa-caret-right"></i></button>
+      <?php
+
+          $q_cnt_rows = mysqli_query($connect,"select * from c_lang");
+          $cnt_rows = mysqli_num_rows($q_cnt_rows);
+          if($cid!=$cnt_rows){
+          $nextid = 0;
+          $nextid = (int)$n[0]*1 + 1;
+          $nexttopic = mysqli_query($connect,"select * from c_lang where id='". $nextid ."'");
+          while($nxt = mysqli_fetch_array($nexttopic)){
+        ?>
+        <a type="button" data-mdb-toggle="tooltip" data-mdb-placement="left" style="float:right;"
+        title="<?php echo $nxt[1]; ?>" href="c.php?id=<?php echo $nxt[0]; ?>"
+        class="btn btn-success">Next &emsp;<i class="fas fa-caret-right"></i></a>
+        <?php } } ?>
     </div>
 </div>
+
 
 
 
