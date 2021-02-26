@@ -55,16 +55,6 @@ $lang = $_GET['lang'];
           <li class="nav-item">
             <a class="nav-link waves-effect"><i class="far fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Support</span></a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle waves-effect" href="#" id="userDropdown" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Profile</span></a>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-              <a class="dropdown-item" href="#">Log Out</a>
-              <a class="dropdown-item" href="#">My account</a>
-            </div>
-          </li>
   
         </ul>
         <!--/Navbar links-->
@@ -78,7 +68,7 @@ $lang = $_GET['lang'];
                 <div class="col-lg-3 col-md-5 col-sm-12">
                     <p>
                         <?php if($lang == 'c_lang') { ?>
-                            <img src="images/Index_image/c.PNG" alt="Error in Image">
+                            <img src="images/Index_image/c.PNG" class="rounded" alt="Error in Image">
                         <?php }  
                         elseif($lang == 'cpp_lang') {
                         ?>
